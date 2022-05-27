@@ -495,7 +495,7 @@ Inodes хранит метаданные о файле, к которому он
 
 </details>
 
-5. Что такое hard link? В чем разница между hard link и soft link? Примеры их практического применения.
+36. Что такое hard link? В чем разница между hard link и soft link? Примеры их практического применения.
 
 <details>
   <summary>Ответ</summary>
@@ -545,14 +545,14 @@ $ ls -li
 
 </details>
 
-6. Какие состояния процессов существуют? Что значит состояние процесса D?
+37. Какие состояния процессов существуют? Что значит состояние процесса D?
 
 <details>
   <summary>Ответ</summary>
 
 </details>
 
-7. Что такое процесс-зомби и процесс-сирота? Можно ли самостоятельно сделать зомби?
+38. Что такое процесс-зомби и процесс-сирота? Можно ли самостоятельно сделать зомби?
 
 <details>
   <summary>Ответ</summary>
@@ -580,7 +580,7 @@ kill -9 <PID процесса родителя>
 
 </details>
 
-8. Что такое файловый дескриптор? Какая информация там хранится?
+39. Что такое файловый дескриптор? Какая информация там хранится?
 
 <details>
   <summary>Ответ</summary>
@@ -589,7 +589,7 @@ kill -9 <PID процесса родителя>
 
 </details>
 
-9. Что такое buffer/cache память? Для чего нужна?
+40. Что такое buffer/cache память? Для чего нужна?
 
 <details>
   <summary>Ответ</summary>
@@ -601,7 +601,7 @@ cached — файлы, которые недавно были использов
 
 </details>
 
-10. Какие DNS записи бывают? Что такое DKIM, DMARC, PTR?
+41. Какие DNS записи бывают? Что такое DKIM, DMARC, PTR?
 
 <details>
   <summary>Ответ</summary>
@@ -628,7 +628,7 @@ Domain-based Message Authentication, Reporting and Conformance (идентифи
 
 </details>
 
-11. Что такое RoundRobin DNS как работает?
+42. Что такое RoundRobin DNS как работает?
 
 <details>
   <summary>Ответ</summary>
@@ -639,7 +639,7 @@ Round-robin DNS работает, отвечая на запросы не тол
 
 </details>
 
-12. Как настроить master-slave репликацию в mysql (кратко)?
+43. Как настроить master-slave репликацию в mysql (кратко)?
 
 <details>
   <summary>Ответ</summary>
@@ -700,7 +700,7 @@ SHOW SLAVE STATUSG
 
 </details>
 
-13. Представлен вывод команды `free`.
+44. Представлен вывод команды `free`.
 ```
 $ free -m
               total        used        free      shared  buff/cache   available
@@ -724,7 +724,7 @@ used = total - free - buff/cache
 
 </details>
 
-14. Вы вводите в строке браузера yandex.ru. Опишите процесс от нажатия клавиши до загрузки страницы.
+45. Вы вводите в строке браузера yandex.ru. Опишите процесс от нажатия клавиши до загрузки страницы.
 
 <details>
   <summary>Ответ</summary>
