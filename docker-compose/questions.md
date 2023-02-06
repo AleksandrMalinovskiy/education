@@ -8,10 +8,10 @@
 2. Как опредилить или переопредилить аргументы в docker-compose?
 <details>
   <summary>Ответ</summary>
-Прописать environment: и аргумент например : \
+Прописать environment: и аргумент например :\
  environment:\
-      - POST_DATABASE_HOST=post_db \
-      - POST_DATABASE=posts \
+      - POST_DATABASE_HOST=post_db\
+      - POST_DATABASE=posts\
 </details>
 
 3. Как собрать контейнеры в одну сеть?
