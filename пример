@@ -1,0 +1,19 @@
+Linux:
+
+
+демон systemd, команды systemctl, как создать сервис, как посмотреть журнал сервиса, что такое journalctl, как провести дебаг сервиса
+
+компоненты процесса что такое PID, PPID, UID, GID и как их получить
+
+команды top, htop что такое load average %Cpu(s): 7.3 us, 5.5 sy, 0.0 ni, 87.3 id, 0.0 wa, 0.0 hi, 0.0 si, 0.0 st приоритет процесса, каким бывает, как установить, как узнать, oomkiller
+
+файловая система как устроена файловая система, что такое inode, стандартные дирректории linux: /bin /boot /dev /etc /home /lib /opt /proc /root /tmp /usr /var, что такое df и ncdu
+
+ACL как назначить права ,как сменить владельца, что такое cgroups
+
+что такое rpm и yum, как посмотреть список установленных пакетов, как найти доступные пакеты в репозиториях, как установить репозиторий
+
+GNU-Utils какими пользовались за последний год sed, awk, xargs, ls, find(и чем отличается от ls), grep, rm, move, tail, head, env, tee, curl, wget, tree
+
+TCP/IP, уровни модели osi, что такое ip адрес, что такое маска сети, чем отличается TCP от UDP, netfilter и его компоненты, iptables и conntrack, что такое порт и сколько их может быть, команды ping, traceroute, tcpdump, netstat, nmap, telnet, netcat, что такое DNS? что такое nslookup
+
