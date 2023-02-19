@@ -62,9 +62,9 @@ cat namefile | wc -l
 10. Как сменить пользователя и группу у файла? 
 <details>
   <summary>Ответ</summary>
-chown name:grup new-name:new-grup namefile. 
+chown new-name:new-grup namefile. 
 Если папка с файлами то 
-chown -R name:grup new-name:new-grup namedir
+chown -R  new-name:new-grup namedir
 </details>
 
 11. Как сменить разрешение на файл ? 
@@ -116,7 +116,11 @@ chmod -R 765 namedir.
 
 
 -rwxrw-r-x alex admins namefile
+u - владелец файла;
 
+g - группа файла;
+
+o - все остальные пользователи
 
 r - чтение;
 
