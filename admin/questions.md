@@ -116,6 +116,7 @@ chmod -R 765 namedir.
 
 
 -rwxrw-r-x alex admins namefile
+
 u - владелец файла;
 
 g - группа файла;
@@ -145,3 +146,24 @@ Find  директория -iname название файла
   <summary>Ответ</summary>
 stat filename или если нужна только дата stat -c ‘%y’ filename
 </details>
+
+15. Как создать нового пользователя пароль и группу для него?
+<details>
+  <summary>Ответ</summary>
+useradd username - новый пользователь
+
+passwd username - пароль для него 
+
+useradd -m username - создать домашнюю директорию для пользователя
+</details>
+
+16. Как добавить пользователя в группу ?
+<details>
+  <summary>Ответ</summary>
+usermod -a -G groupname username
+
+Например, чтобы добавить пользователя linuxize в группу sudo , вы должны выполнить следующую команду:
+
+sudo usermod -a -G sudo username
+</details>
+
