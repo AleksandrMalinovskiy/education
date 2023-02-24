@@ -1,7 +1,7 @@
 1. Как найти файл на серевере с определленой строкой ? 
 <details>
   <summary>Ответ</summary>
-grep строка / 
+grep -r -n строка / 
 </details>
 
 2. Как удалить сроку из файла начинающуюся с name ?
@@ -153,6 +153,8 @@ stat filename или если нужна только дата stat -c ‘%y’ 
 useradd username - новый пользователь
 
 passwd username - пароль для него 
+
+groupadd name - группа для него
 
 useradd -m username - создать домашнюю директорию для пользователя
 </details>

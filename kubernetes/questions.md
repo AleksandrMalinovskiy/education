@@ -58,7 +58,9 @@ container runtime.
 <details>
   <summary>Ответ</summary>
 endpoints controller - заполняет объект конечных точек (Endpoints), то есть связывает сервисы (Services) и поды (Pods)
+
 service accounts controller и token controller -  создают стандартные учетные записи и токены доступа API для новых пространств имен.
+
 replication controller - поддерживает правильное количество подов для каждого объекта контроллера репликации в системе
 
 </details>
@@ -272,3 +274,44 @@ HOME/.kube/config
 
 </details>
 
+26. Как происходит процес создания нового пода?
+<details>
+  <summary>Ответ</summary>
+При создании нового pod-а – процесс выглядит так:
+
+kubectl шлёт запрос к API-серверу
+
+API-сервер валидирует его, и передаёт в etcd
+
+etcd сообщает обратно API-серверу, что запрос принят и сохранён
+
+API-сервер обращается к kube-scheduler
+
+kube-scheduler определяет ноду(ы), на которой будет создан pod, и возвращает информацию обратно API-серверу
+
+API-сервер отправляет эти данные в etcd
+
+etcd сообщает обратно API-серверу, что запрос принят и сохранён
+
+API-сервер обращается к kubelet на соответствующей ноде(ам)
+
+kubelet обращается к Docker демону (или другому container runtime) через его API через сокет Docker-демона на ноде с задачей запустить контейнер
+
+kubelet отправляет статус pod-а API-серверу
+
+API-сервер обновляет данные в etcd
+</details>
+
+27. Какие виды стратегий развертывания есть в kubernetes?
+<details>
+  <summary>Ответ</summary>
+Rolling Strategy Deployment
+
+Recreate
+
+Blue/ Green (or Red / Black) deployments
+
+Canary
+</details>
+
+28. 
