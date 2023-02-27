@@ -169,3 +169,15 @@ usermod -a -G groupname username
 sudo usermod -a -G sudo username
 </details>
 
+17. Как посмотреть окрытые порты на сервере ?
+<details>
+  <summary>Ответ</summary>
+ss -ntlp 
+</details>
+
+18. Как посомтреть открыт ли порт на удаленном сервере ? 
+<details>
+  <summary>Ответ</summary>
+telnet IP PORT 
+</details>
+
