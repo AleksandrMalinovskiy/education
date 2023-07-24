@@ -179,5 +179,7 @@ ss -ntlp
 <details>
   <summary>Ответ</summary>
 telnet IP PORT 
+nmap IP -p PORT 
+
 </details>
 

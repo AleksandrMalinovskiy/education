@@ -1,0 +1,50 @@
+MAIN build and push docker image:
+  stage: build
+  tags:
+    - $RUNNER_TAG_K8S
+  variables:
+    EXEC: main.py
+    TAG: batch
+  image:
+    name: $DOCKER_REGISTRY/$NEXUS_SPACE/$KANIKO_IMAGE
+    entrypoint: [""]
+  rules:
+      - if: '$CI_BUILD_REF_NAME == "main" && $CI_MERGE_REQUEST_ID '
+        when: never
+      - if: '$CI_BUILD_REF_NAME == "main" && $CUDA == "1" '
+        variables:
+          IMAGE: $CICD_IMAGE_BATCH_CUDA
+        when: always
+      - if: '$CI_BUILD_REF_NAME == "main" && $CUDA ==
+
+
+  MAIN build and push docker image:
+  stage: build
+  tags:
+    - $RUNNER_TAG_K8S
+  variables:
+    EXEC: main.py
+    TAG: batch
+  image:
+    name: $DOCKER_REGISTRY/$NEXUS_SPACE/$KANIKO_IMAGE
+    entrypoint: [""]
+
+
+    rules:
+      - if: '$CI_BUILD_REF_NAME == "main" && $CI_MERGE_REQUEST_ID '
+        when: never
+      - if: '$CI_BUILD_REF_NAME == "main" && $CUDA == "1" '
+        variables:
+          IMAGE: $CICD_IMAGE_BATCH_CUDA
+        when: always
+      - if: '$CI_BUILD_REF_NAME == "main" && $CUDA == "0" '
+        variables:
+          IMAGE: $CICD_IMAGE_BATCH
+        when: always
+before_script:
+    - *envs
+    - *dvc
+    - *copy_docker_and_start_sh
+  script:
+    - echo $IMAGE
+    - *docker_build
